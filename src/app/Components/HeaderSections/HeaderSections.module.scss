@@ -1,0 +1,34 @@
+@import 'styles/_variables.scss';
+@import 'styles/_fonts.scss';
+
+.header{
+    .title{
+        color: $color_dark;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom:30px;
+        span{
+            display: block;
+        }
+        h2{
+            font-family: $intro_rust;
+            @include font28();
+            padding: 0 30px;
+            margin:0;
+        }
+    }
+    .subtitle{
+        font-family: $minion_pro_regular;
+        @include font16();
+        text-align: center;
+    }
+    @media screen and (min-width: 991px) {
+        .title{
+            h2{
+                @include font50();
+            }
+        }
+    }
+}

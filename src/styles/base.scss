@@ -1,0 +1,257 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './_variables.scss';
+@import './_mixins.scss';
+
+/*================================================
+Got Top CSS
+=================================================*/
+.ScrollUpButton__Container.ScrollUpButton__Toggled:hover {
+    transition: 0.4s !important;
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    font-size: 1.8rem;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background: url("../resources/images/bg_intern.jpg") repeat 0 0;
+    background-size: cover;
+    height: 100vh;
+}
+a {
+    display: inline-block;
+    outline: none;
+    text-decoration: none;
+    transition: 0.4s;
+    &:hover{
+        text-decoration: none;
+    }
+}
+p {
+    margin:0;
+    line-height: 1.8;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.btn, button {
+    border: none;
+    line-height: 1.5;
+    text-transform: capitalize;
+    border-radius: 50px;
+}
+ul{
+    margin:0;
+    padding:0;
+    li{
+        list-style-type: none;
+    }
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    font-weight: 100;
+}
+.owl-theme {
+    touch-action: none;
+    .owl-dots {
+        line-height: 0.1;
+        margin-top: 40px !important;
+        .owl-dot {
+            span {
+                width: 15px !important;
+                height: 15px !important;
+                margin: 0 5px !important;
+                background: $color_dark !important;
+                border-radius: 50% !important;
+                transition: 0.4s !important;
+            }
+            &.active{
+                span{
+                    background: $color_brown !important;
+                }
+            }
+        }
+    }
+    &.gallery-slides{
+        .owl-stage-outer{
+            .owl-stage{
+                .owl-item{
+                    >div{
+                        img{
+                            height: 400px;
+                            width: 100%;
+                            object-fit: cover;
+                        } 
+                    }
+                    @media screen and (min-width: 1200px) {
+                        &:first-child{
+                            .first{
+                                margin-left: 0; 
+                            } 
+                        }
+                        &:nth-child(3n){
+                            .third{
+                                margin-right: 0; 
+                            }
+                        }
+                        >div{
+                            margin: 0 25px;
+                            img{
+                                width: 95%;
+                            } 
+                            &.first{
+                                margin-left:50px; 
+                            } 
+                            &.second{
+                                margin:0;
+                                img{
+                                    width: 100%;
+                                } 
+                            }
+                            &.third{
+                                display: flex;
+                                justify-content: flex-end;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .owl-nav{
+            margin-top: 40px;
+            .owl-prev, .owl-next{
+                position: relative;
+                background: transparent;
+                border: 1px solid $color_brown;
+                border-radius: 0;
+                width: 50px;
+                height: 50px;
+                margin: 0;
+                transition: .6s;
+                z-index: 4;
+                &:hover, &:focus{
+                    background: $color_dark;
+                    border-color:$color_dark;
+                }
+                &:after{
+                    @include afterBefore();
+                    background: url("../resources/images/arrow.png") no-repeat 0 0;
+                    width: 80px;
+                    top: 15px;
+                    height: 16px;
+                    background-size: contain;
+                }
+            }
+            .owl-prev{
+                margin-right: 180px;
+                &:after{
+                    left: 20px;
+                }
+            }
+            .owl-next{
+                &:after{
+                    @include rotate(180);
+                    right: 20px;
+                }
+            }
+            @media screen and (min-width: 992px) {
+                .owl-prev, .owl-next{
+                    width: 60px;
+                    height: 60px;
+                    &:after{
+                        width: 112px;
+                        top: 15px;
+                        height: 27px;
+                    }
+                }
+                .owl-prev{
+                    margin-right: 330px;
+                    &:after{
+                        left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+.tab-slider-nav{
+    .tab-slider{
+        .nav-tabs {
+            .nav-link{
+                &.active {
+                    color: $color_dark;
+                    &:after{
+                        width: 100%;
+                        overflow: visible;
+                        visibility: visible;
+                    } 
+                }
+            }
+        }
+    }
+}
+.navbar-wrapper{
+    .navbar{
+        &.is-sticky{
+            position: fixed; 
+            background: $color_dark;
+            .container{
+                .navbar-brand{
+                   a{
+                        img{
+                            width: auto !important;
+                            height: 40px;
+                            &.logo{
+                                display: none;
+                            }
+                            &.logo-sticky{
+                                display: block;
+                            }
+                        }
+                   }
+                }
+                .toggle-button{
+                    border:none;
+                }
+                .navbar-collapse{
+                    border:none;
+                    .navbar-nav{
+                        .nav-item{
+                            a{
+                                &.active{
+                                    &:after{
+                                        width: 100%;
+                                        overflow: visible;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+.fa-check{
+    color:$color_green;
+}
+.fa-times{
+    color:$color_red;
+}
+.collapsing{
+    -webkit-transition: height 0.01s;
+    -moz-transition: height 0.01s;
+    -ms-transition: height 0.01s;
+    -o-transition: height 0.01s;
+    transition: height 0.01s;
+}
