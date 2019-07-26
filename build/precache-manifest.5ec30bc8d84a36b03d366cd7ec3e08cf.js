@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "e456225b59b9866be7db",
+    "revision": "67ee029d155339afc1b9",
     "url": "/coffe_maker/static/css/main.ad298e01.chunk.css"
   },
   {
-    "revision": "e456225b59b9866be7db",
-    "url": "/coffe_maker/static/js/main.e456225b.chunk.js"
+    "revision": "67ee029d155339afc1b9",
+    "url": "/coffe_maker/static/js/main.67ee029d.chunk.js"
   },
   {
     "revision": "6d9d74c89d354fa18f48",
@@ -100,7 +100,7 @@ self.__precacheManifest = [
     "url": "/coffe_maker/static/media/bg_intern.d766daae.jpg"
   },
   {
-    "revision": "a01b5bf2fe2e1e25abfdaec4698dd8d0",
+    "revision": "df191d67c00cb7420c4924843127faf7",
     "url": "/coffe_maker/index.html"
   }
 ];
