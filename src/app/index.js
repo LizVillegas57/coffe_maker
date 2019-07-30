@@ -12,7 +12,7 @@ const App = () => {
       <Router>
         <Page loader={"rotate-spin"} color={"#EAB96A"} size={10}>
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route path="/" component={Home} />
           </Switch>
         </Page>
       </Router>

@@ -6,42 +6,40 @@ import styles from "./Testimonials.module.scss";
 
 export class Testimonials extends Component {
     render() {
-        const testimonialsData = this.props.testimonialsData.map((team, index ) =>(
+        const testimonialsData = this.props.testimonialsData.map((testimonial, index ) =>(
             <div className={styles.item} key={index}>
                 <div className={styles.picture}>
-                    <img src={team.img} alt="Coffe Maker" className={styles.img}/>
+                    <img src={testimonial.img} alt="Coffe Maker" className={styles.img}/>
                     <button type="button" className={styles.socialicon}>
-                        <img src={team.socialicon} alt="Coffe Maker" />
+                        <img src={testimonial.socialicon} alt="Coffe Maker" />
                     </button>
                 </div>
-                <h4>{team.name}</h4>
-                <p>{team.description}</p>
+                <h4>{testimonial.name}</h4>
+                <p>{testimonial.description}</p>
             </div>
         ));
         return (
             <>
                 <section id="reviews" className={styles.testimonials}>
-                    <div className="container">
-                    <HeaderSections classes={styles.header} title="testimonials" subtitle="We have enough patience to teach you the art of coffee" />
-                        <div className="row">
-                            <OwlCarousel 
-                                className="team-slides owl-theme"
-                                loop={true}
-                                autoplay={true}
-                                nav={true}
-                                mouseDrag={true}
-                                autoplayHoverPause={true}
-                                responsiveClass={true}
-                                dots={true}
-                                items={1}
-                                navText={[
-                                    "<i class='icon icon-left'></i>",
-                                    "<i class='icon icon-right'></i>"
-                                ]}
-                            >
-                                {testimonialsData}
-                            </OwlCarousel>
-                        </div>
+                    <div className={styles.content}>
+                        <HeaderSections classes={styles.header} title="testimonials" subtitle="We have enough patience to teach you the art of coffee" />
+                        <OwlCarousel 
+                            className="testimonial-slides owl-theme"
+                            loop={true}
+                            autoplay={true}
+                            nav={true}
+                            mouseDrag={true}
+                            autoplayHoverPause={true}
+                            responsiveClass={true}
+                            dots={true}
+                            items={1}
+                            navText={[
+                                "<i class='icon icon-left'></i>",
+                                "<i class='icon icon-right'></i>"
+                            ]}
+                        >
+                            {testimonialsData}
+                        </OwlCarousel>
                     </div>
                 </section>
             </>
@@ -49,7 +47,7 @@ export class Testimonials extends Component {
   }
 }
 Testimonials.PropsTypes = {
-    teamsData: PropTypes.array,
+    testimonialData: PropTypes.array,
 }
 Testimonials.defaultProps = {
     testimonialsData: [

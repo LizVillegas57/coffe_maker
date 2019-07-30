@@ -23,40 +23,51 @@ body {
     background: url("../resources/images/bg_intern.jpg") repeat 0 0;
     background-size: cover;
     height: 100vh;
-}
-a {
-    display: inline-block;
-    outline: none;
-    text-decoration: none;
-    transition: 0.4s;
-    &:hover{
+    a {
+        display: inline-block;
+        outline: none;
         text-decoration: none;
+        transition: 0.4s;
+        &:hover{
+            text-decoration: none;
+        }
+    }
+    p {
+        margin:0;
+        line-height: 1.8;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .btn, button {
+        border: none;
+        line-height: 1.5;
+        text-transform: capitalize;
+        border-radius: 50px;
+    }
+    ul{
+        margin:0;
+        padding:0;
+        li{
+            list-style-type: none;
+        }
+    }
+    .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+        font-weight: 100;
+    }
+    .was-validated .form-control:invalid:focus{
+        box-shadow: none;
+    }
+    .was-validated  .form-control.is-valid, 
+    .was-validated .form-control.is-valid:focus,
+    .was-validated .form-control:valid:focus{
+        box-shadow: none !important;
+        border-bottom:1px solid $color_dark !important;
+        background: transparent !important;
     }
 }
-p {
-    margin:0;
-    line-height: 1.8;
-}
-img {
-    max-width: 100%;
-    height: auto;
-}
-.btn, button {
-    border: none;
-    line-height: 1.5;
-    text-transform: capitalize;
-    border-radius: 50px;
-}
-ul{
-    margin:0;
-    padding:0;
-    li{
-        list-style-type: none;
-    }
-}
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
-    font-weight: 100;
-}
+
 .owl-theme {
     touch-action: none;
     .owl-dots {
@@ -177,6 +188,68 @@ ul{
                     }
                 }
             }
+        }
+    }
+    &.testimonial-slides, &.partners-slides{
+        position: relative;
+        .owl-nav{
+            position: absolute;
+            width: 100%;
+            margin:0;
+            top: 58%;
+            .owl-next, .owl-prev{
+                background: transparent;
+                position: absolute;
+                padding:0;
+                margin:0;
+                display: block;
+                width: 20px;
+                &:hover, &:focus{
+                    background: transparent;
+                }
+                .icon{
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    &:after, &:before{
+                        @include afterBefore();
+                        background: $color_blue;
+                        width: 12px;
+                        height: 2px;
+                        top:0;
+                    }
+                }
+            }
+            .owl-prev{
+                left: 0;
+                .icon{
+                    &:before{
+                        @include rotate(-45);
+                    }
+                    &:after{
+                        top: 8px;
+                        @include rotate(45);
+                    }
+                    
+                }
+            }
+            .owl-next{
+                right: 0;
+                .icon{
+                    &:before{
+                        @include rotate(45);
+                    }
+                    &:after{
+                        top: 8px;
+                        @include rotate(-45);
+                    }
+                }
+            }
+        }
+    }
+    &.partners-slides{
+        .owl-nav{
+            top: 45%;
         }
     }
 }

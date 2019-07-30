@@ -20,6 +20,8 @@
     .programsContent{
         padding:40px 20px;
         margin: 0 auto;
+        position: relative;
+        z-index: 1;
         .tabSliderNav{
             .tabSlider{
                 .nameBackground{
@@ -316,7 +318,9 @@
                         right: 0;
                         @include font200();
                         font-family: $intro_regular;
+                        display: block;
                         text-transform: uppercase;
+                        top: 76px;
                     }
                     .top{
                         flex-flow: row nowrap;

@@ -5,8 +5,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar, faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import styles from "./Hero.module.scss";
 
-
-
 class Hero extends Component {
     render() {
         const star = <FontAwesomeIcon icon={faStar} />

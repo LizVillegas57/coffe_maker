@@ -76,9 +76,9 @@ export class Programs extends Component {
                         <HeaderSections classes={styles.header} icon={star} title="Programs" subtitle="We share their experience and professional barista championships multiple winners" />
                         <div className={`tab-slider-nav ${styles.tabSliderNav}`}>
                             <div className={`tab-slider ${styles.tabSlider}`}>
-                                <div className={styles.nameBackground}>basic</div>
                                 <Tabs defaultActiveKey="basic" id="uncontrolled-tab">
                                     <Tab eventKey="basic" title="Basic">
+                                        <div className={styles.nameBackground}>basic</div>
                                         <div className={styles.top}>
                                             <div className={styles.imgContainer}>
                                                 <img src={this.props.img} alt="Coffe Make" className={styles.img}/>

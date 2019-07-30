@@ -35,16 +35,23 @@
             font-family: $minion_pro_regular;
             @include font16();
             line-height: 35px;
+            padding: 0 30px;
         }
     }
     @media screen and (min-width: 992px) {
-        padding:0 0 80px;
+        padding:0 20px 80px;
         .item{
             margin-top:80px;
             p{
                 width: 856px;
                 margin:0 auto;
             }
+        }
+    }
+    @media screen and (min-width: 1240px) {
+        .content{
+            max-width: 1200px;
+            margin: 0 auto;
         }
     }
 }
